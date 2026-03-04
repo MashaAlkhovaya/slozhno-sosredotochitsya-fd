@@ -1,3 +1,13 @@
+:root {
+  --cover: url(../images/cover-image-dark.png);
+  --bg-color: #000028;
+  --title-color: #db00ff;
+  --accent-color-text: #ff0070;
+  --accent-color: #ff0070;
+  --text-color: #f1b2ce;
+  --font: 'IBM Plex mono';
+  --font-size: 18px;
+}
 /*
   Переменные для вашего проекта
   и их переопределение под различные устройства
