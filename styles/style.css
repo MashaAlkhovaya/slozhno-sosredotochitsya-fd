@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background-color: var(--bg-color, #000028);
+  background-color: var(--bg-color);
   background-image: var(--cover);
   background-repeat: no-repeat;
   background-position: center;
@@ -22,6 +22,7 @@
 .header__decorated {
   position: absolute;
   top: 10px;
+  display: var(--visually-hidden);
   color: var(--accent-color);
   font-family: var(--font), sans-serif;
   font-size: var(--font-size);
@@ -44,8 +45,8 @@
 .decorated-zone::before {
   content: "";
   position: absolute;
-  border-inline-start: 1px solid var(--accent-color);
-  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color-text);
+  border-block-end: 1px solid var(--accent-color-text);
   inline-size: 25px;
   block-size: 25px;
   inset-block-end: 10px;
@@ -54,8 +55,8 @@
 .decorated-zone::after {
   content: "";
   position: absolute;
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color-text);
+  border-block-start: 1px solid var(--accent-color-text);
   inline-size: 25px;
   block-size: 25px;
   inset-inline-end: 0px;
@@ -86,11 +87,11 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--accent-color-text);
 }
 
 .header__theme-menu-button__active {
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--accent-color-text);
   pointer-events: none;
 }
 
@@ -247,18 +248,25 @@
   }
 
   .main__content {
+    display: grid;
     grid-template-columns: 1fr 2fr;
   }
 
-  .main__content > *:nth-child(1) {
-    grid-row: 1 / 7;
+  .content__title {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .card {
+    grid-column: 2;
   }
 
   .main__content-section {
-    display: flex;
+    display: flex; 
     flex-direction: column;
     gap: 20px;
   }
+
 
   .content__title-text {
     display: grid;
@@ -293,4 +301,39 @@
 }
 
 @media (width >=1024px) {
+  .page {
+    margin-block-start: 20px;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    align-self: flex-start;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .main__content-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: start;
+  }
+
+
+  .card__article {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
 }
