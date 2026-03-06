@@ -15,6 +15,7 @@
   --bg-color: #fff1f7;
   --title-color: #ffc2e6;
   --accent-color-text: #353430;
+  --accent-color-text-transparency: rgba(50, 49, 45, 0.4);
   --accent-color: #ff8dcb;
   --text-color: #353430;
   --color: #353430;
@@ -29,6 +30,7 @@
   --bg-color: #fff1f7;
   --title-color: #ffc2e6;
   --accent-color-text: #353430;
+    --accent-color-text-transparency: rgba(50, 49, 45, 0.4);
   --accent-color: #ff8dcb;
   --text-color: #353430;
   --color: #353430;
