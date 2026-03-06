@@ -1,6 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
   background-color: var(--bg-color);
   background-image: var(--cover);
   background-repeat: no-repeat;
